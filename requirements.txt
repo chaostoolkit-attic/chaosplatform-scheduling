@@ -2,6 +2,7 @@ Click==7.0
 flask==1.0.2
 flask-jwt-extended==3.14.0
 cryptography==2.3.1
+dateparser==0.7.0
 itsdangerous==0.24
 flask-caching==1.4.0
 cherrypy==18.0.1
