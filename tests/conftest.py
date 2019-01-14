@@ -30,12 +30,12 @@ from chaosplt_scheduling.storage import initialize_storage, shutdown_storage, \
 
 cur_dir = os.path.abspath(os.path.dirname(__file__))
 fixtures_dir = os.path.join(cur_dir, "fixtures")
-env_path = os.path.join(fixtures_dir, '.env')
+config_path = os.path.join(fixtures_dir, 'config.toml')
 
 
 @pytest.fixture
 def config():
-    return load_settings(env_path)
+    return load_settings(config_path)
 
 
 @pytest.fixture(autouse=True)
