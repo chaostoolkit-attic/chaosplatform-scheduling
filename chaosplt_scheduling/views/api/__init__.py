@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import logging
 from logging import StreamHandler
-import os
 from typing import Any, Dict
 
 from flask import Blueprint, Flask, after_this_request, request, Response
