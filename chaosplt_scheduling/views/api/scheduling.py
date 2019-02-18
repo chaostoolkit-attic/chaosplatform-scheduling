@@ -51,8 +51,8 @@ def new():
             "message": "Invalid schedule date"
         }), 422
 
-    token = request.services.auth.access_token.get(user_id, token_id)
-    if not token:
+    token = request.services.auth.access_token.get(token_id)
+    if not token or token.revoked or token.user_id != user_id:
         return jsonify({
             "message": "Invalid token"
         }), 422
